@@ -18,9 +18,33 @@
         <?php
         $text = "Hello, World!";
         echo "<p>Original Text: <span class='result'>$text</span></p>";
+        
+        // String length
         echo "<p>Length: <span class='result'>" . strlen($text) . "</span></p>";
+        
+        // Uppercase
         echo "<p>Uppercase: <span class='result'>" . strtoupper($text) . "</span></p>";
+        
+        // Lowercase
         echo "<p>Lowercase: <span class='result'>" . strtolower($text) . "</span></p>";
+        
+        // Reverse
+        echo "<p>Reversed: <span class='result'>" . strrev($text) . "</span></p>";
+        
+        // Word count
+        echo "<p>Word Count: <span class='result'>" . str_word_count($text) . "</span></p>";
+        
+        // Find position of substring
+        $substring = "World";
+        $position = strpos($text, $substring);
+        echo "<p>Position of '$substring': <span class='result'>" . ($position !== false ? $position : "Not found") . "</span></p>";
+        
+        // Replace text
+        $replace = "Universe";
+        echo "<p>Replace 'World' with 'Universe': <span class='result'>" . str_replace("World", $replace, $text) . "</span></p>";
+        
+        // Shuffle string
+        echo "<p>Shuffled: <span class='result'>" . str_shuffle($text) . "</span></p>";
         ?>
     </div>
 </body>
